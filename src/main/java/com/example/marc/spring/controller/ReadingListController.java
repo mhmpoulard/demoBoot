@@ -32,6 +32,7 @@ public class ReadingListController {
         return "readingList";
     }
 
+    /* saving a book */
     @RequestMapping(value="/{reader}", method=RequestMethod.POST)
     public String addToReadingList(@PathVariable("reader") String reader, Book book) {
         book.setReader(reader);
