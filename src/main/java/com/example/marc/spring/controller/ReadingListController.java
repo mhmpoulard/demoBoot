@@ -21,6 +21,7 @@ public class ReadingListController {
         this.readingListRepository = readingListRepository;
     }
 
+    /* return the whole list */
     @RequestMapping(value = "/{reader}", method= RequestMethod.GET)
     public String readerBooks(@PathVariable("reader") String reader, Model model) {
         List<Book> readingList = readingListRepository.findByReader(reader);
